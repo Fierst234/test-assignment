@@ -1,7 +1,7 @@
 services:
   backend:
     build: ./backend
-    container_name: em_backend
+    container_name: backend
     restart: unless-stopped
     networks:
       - internal
@@ -11,7 +11,7 @@ services:
 
   nginx:
     build: ./nginx
-    container_name: em_nginx
+    container_name: nginx
     restart: unless-stopped
     networks:
       - internal
@@ -24,4 +24,4 @@ services:
 networks:
   internal:
     driver: bridge
-    name: em_network
+    name: network
